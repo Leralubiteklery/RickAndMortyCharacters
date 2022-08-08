@@ -13,10 +13,11 @@
 		ED7B895428A1AB7900AA686A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7B895228A1AB7900AA686A /* Main.storyboard */; };
 		ED7B895628A1AB7B00AA686A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED7B895528A1AB7B00AA686A /* Assets.xcassets */; };
 		ED7B895928A1AB7B00AA686A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED7B895728A1AB7B00AA686A /* LaunchScreen.storyboard */; };
+		ED7B896628A1ABE400AA686A /* Character.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7B896528A1ABE400AA686A /* Character.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED7B894928A1AB7900AA686A /* MovieFinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieFinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED7B894928A1AB7900AA686A /* RickAndMortyCharaters.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RickAndMortyCharaters.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED7B894C28A1AB7900AA686A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED7B894E28A1AB7900AA686A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		ED7B895028A1AB7900AA686A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -24,6 +25,7 @@
 		ED7B895528A1AB7B00AA686A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ED7B895828A1AB7B00AA686A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ED7B895A28A1AB7B00AA686A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED7B896528A1ABE400AA686A /* Character.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Character.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,7 +50,7 @@
 		ED7B894A28A1AB7900AA686A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED7B894928A1AB7900AA686A /* MovieFinder.app */,
+				ED7B894928A1AB7900AA686A /* RickAndMortyCharaters.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -56,23 +58,64 @@
 		ED7B894B28A1AB7900AA686A /* MovieFinder */ = {
 			isa = PBXGroup;
 			children = (
-				ED7B894C28A1AB7900AA686A /* AppDelegate.swift */,
-				ED7B894E28A1AB7900AA686A /* SceneDelegate.swift */,
-				ED7B895028A1AB7900AA686A /* ViewController.swift */,
-				ED7B895228A1AB7900AA686A /* Main.storyboard */,
-				ED7B895528A1AB7B00AA686A /* Assets.xcassets */,
-				ED7B895728A1AB7B00AA686A /* LaunchScreen.storyboard */,
-				ED7B895A28A1AB7B00AA686A /* Info.plist */,
+				ED7B896428A1ABD500AA686A /* Models */,
+				ED7B896028A1AB8800AA686A /* App */,
+				ED7B896128A1ABA900AA686A /* ViewControllers */,
+				ED7B896228A1ABB800AA686A /* Storyboards */,
+				ED7B896328A1ABC300AA686A /* Resources */,
 			);
 			path = MovieFinder;
+			sourceTree = "<group>";
+		};
+		ED7B896028A1AB8800AA686A /* App */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B894C28A1AB7900AA686A /* AppDelegate.swift */,
+				ED7B894E28A1AB7900AA686A /* SceneDelegate.swift */,
+				ED7B895A28A1AB7B00AA686A /* Info.plist */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		ED7B896128A1ABA900AA686A /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B895028A1AB7900AA686A /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		ED7B896228A1ABB800AA686A /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B895228A1AB7900AA686A /* Main.storyboard */,
+				ED7B895728A1AB7B00AA686A /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		ED7B896328A1ABC300AA686A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B895528A1AB7B00AA686A /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		ED7B896428A1ABD500AA686A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				ED7B896528A1ABE400AA686A /* Character.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED7B894828A1AB7900AA686A /* MovieFinder */ = {
+		ED7B894828A1AB7900AA686A /* RickAndMortyCharaters */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED7B895D28A1AB7B00AA686A /* Build configuration list for PBXNativeTarget "MovieFinder" */;
+			buildConfigurationList = ED7B895D28A1AB7B00AA686A /* Build configuration list for PBXNativeTarget "RickAndMortyCharaters" */;
 			buildPhases = (
 				ED7B894528A1AB7900AA686A /* Sources */,
 				ED7B894628A1AB7900AA686A /* Frameworks */,
@@ -82,9 +125,9 @@
 			);
 			dependencies = (
 			);
-			name = MovieFinder;
+			name = RickAndMortyCharaters;
 			productName = MovieFinder;
-			productReference = ED7B894928A1AB7900AA686A /* MovieFinder.app */;
+			productReference = ED7B894928A1AB7900AA686A /* RickAndMortyCharaters.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -102,7 +145,7 @@
 					};
 				};
 			};
-			buildConfigurationList = ED7B894428A1AB7900AA686A /* Build configuration list for PBXProject "MovieFinder" */;
+			buildConfigurationList = ED7B894428A1AB7900AA686A /* Build configuration list for PBXProject "RickAndMortyCharaters" */;
 			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -115,7 +158,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED7B894828A1AB7900AA686A /* MovieFinder */,
+				ED7B894828A1AB7900AA686A /* RickAndMortyCharaters */,
 			);
 		};
 /* End PBXProject section */
@@ -140,6 +183,7 @@
 			files = (
 				ED7B895128A1AB7900AA686A /* ViewController.swift in Sources */,
 				ED7B894D28A1AB7900AA686A /* AppDelegate.swift in Sources */,
+				ED7B896628A1ABE400AA686A /* Character.swift in Sources */,
 				ED7B894F28A1AB7900AA686A /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -289,7 +333,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3Y2L7NT9R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieFinder/Info.plist;
+				INFOPLIST_FILE = MovieFinder/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -304,7 +348,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -317,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = N3Y2L7NT9R;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = MovieFinder/Info.plist;
+				INFOPLIST_FILE = MovieFinder/App/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -332,14 +376,14 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED7B894428A1AB7900AA686A /* Build configuration list for PBXProject "MovieFinder" */ = {
+		ED7B894428A1AB7900AA686A /* Build configuration list for PBXProject "RickAndMortyCharaters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED7B895B28A1AB7B00AA686A /* Debug */,
@@ -348,7 +392,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED7B895D28A1AB7B00AA686A /* Build configuration list for PBXNativeTarget "MovieFinder" */ = {
+		ED7B895D28A1AB7B00AA686A /* Build configuration list for PBXNativeTarget "RickAndMortyCharaters" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				ED7B895E28A1AB7B00AA686A /* Debug */,
