@@ -7,20 +7,35 @@
 
 import UIKit
 
-enum imageUrl: String {
-    case rick = "https://rickandmortyapi.com/api/character/avatar/1.jpeg"
-    case morty = "https://rickandmortyapi.com/api/character/avatar/2.jpeg"
-    case summer = "https://rickandmortyapi.com/api/character/avatar/3.jpeg"
-    case beth = "https://rickandmortyapi.com/api/character/avatar/4.jpeg"
-    case jerry = "https://rickandmortyapi.com/api/character/avatar/5.jpeg"
-    case johnny = "https://rickandmortyapi.com/api/character/avatar/183.jpeg"
-    case ants = "https://rickandmortyapi.com/api/character/avatar/20.jpeg"
-    
-    
-}
+
 
 class ViewController: UIViewController {
 
+
+    @IBAction func getCharactersButtonPressed(_ sender: Any) {
+        fetchCharatcerInfo()
+    }
+    
+    private func fetchCharatcerInfo() {
+        
+         guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
+        
+        URLSession.shared.dataTask(with: url) {  [weak self] data, _, error in
+            guard let data = data else {
+                print(error?.localizedDescription ?? "no error description")
+                return
+            }
+            do {
+            let listOfCharacters = try JSONDecoder().decode(ListOfCharacters.self, from: data)
+                print(listOfCharacters)
+            } catch let error {
+                print(error)
+            }
+        }.resume()
+    }
+    
+    
+   
     
 
 }
