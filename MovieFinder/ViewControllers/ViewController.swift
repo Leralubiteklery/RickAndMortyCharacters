@@ -7,18 +7,15 @@
 
 import UIKit
 
-
-
 class ViewController: UIViewController {
-
-
+    
     @IBAction func getCharactersButtonPressed(_ sender: Any) {
         fetchCharatcerInfo()
     }
     
     private func fetchCharatcerInfo() {
         
-         guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
+        guard let url = URL(string: "https://rickandmortyapi.com/api/character") else { return }
         
         URLSession.shared.dataTask(with: url) {  [weak self] data, _, error in
             guard let data = data else {
@@ -26,17 +23,12 @@ class ViewController: UIViewController {
                 return
             }
             do {
-            let listOfCharacters = try JSONDecoder().decode(ListOfCharacters.self, from: data)
+                let listOfCharacters = try JSONDecoder().decode(ListOfCharacters.self, from: data)
                 print(listOfCharacters)
             } catch let error {
                 print(error)
             }
         }.resume()
     }
-    
-    
-   
-    
-
 }
 
